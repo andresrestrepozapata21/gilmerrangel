@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Sevilla</title>
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="img">
+        <img src="assets/imgs/gilmerFondoSevilla.jpg" alt="">
+    </div>
+    <!-- HTML del formulario en cuestion, encerrado en un <form> -->
+    <form id="form" method="POST">
+        <div class="partido">
+            <img src="assets/imgs/logosCampana.png" alt="">
+        </div>
+        <div class="input-group">
+            <h1>Diligencia el Formulario</h1>
+        </div>
+        <br>
+        <div class="input-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="input-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+
+        <div class="input-group">
+            <label for="confirme-telefono">Confirme Teléfono:</label>
+            <input type="tel" id="confirme-telefono" name="confirme-telefono" required>
+            <span id="confirmation-message"></span>
+        </div>
+
+        <div class="input-group">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="input-group">
+            <label for="mensaje">Escribe tu mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="10"></textarea>
+        </div>
+
+        <input type="submit" value="Enviar" class="submit-btn" id="enviarBtn" disabled>
+        <br>
+        <!-- Contenedor donde mostrare la respuesta al usuario -->
+        <div class="answer" id="answer"></div>
+    </form>
+    <!-- javascript en modulo o directo que necesito -->
+    <!-- JS directo para validar en tiempo real que los numeros de telefono coincidan -->
+    <script>
+        //oyente de cada que el usuario tipea con el teclado
+        document.addEventListener('DOMContentLoaded', function () {
+            //declaro las variables que necesito
+            const telefonoInput = document.querySelector('#telefono');
+            const confirmeTelefonoInput = document.querySelector('#confirme-telefono');
+            const confirmationMessage = document.querySelector('#confirmation-message');
+            // Función para validar los teléfonos
+            function validateTelephones() {
+                if (telefonoInput.value === confirmeTelefonoInput.value) {
+                    confirmationMessage.textContent = 'Los números coinciden.';
+                    confirmationMessage.style.color = 'green';
+                    enviarBtn.removeAttribute("disabled");
+                } else {
+                    confirmationMessage.textContent = 'Los números no coinciden.';
+                    confirmationMessage.style.color = 'red';
+                    enviarBtn.setAttribute("disabled", "true");
+                }
+            }
+            // Agregar evento input para realizar la validación en tiempo real
+            telefonoInput.addEventListener('input', validateTelephones);
+            confirmeTelefonoInput.addEventListener('input', validateTelephones);
+        });
+    </script>
+    <!-- JS modular para enviar el formulario -->
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

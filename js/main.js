@@ -61,6 +61,18 @@
         .not('[href="#blog-popup-1"]')
         .not('[href="#blog-popup-2"]')
         .not('[href="#blog-popup-3"]')
+        .not('[href="#blog-popup-4"]')
+        .not('[href="#blog-popup-5"]')
+        .not('[href="#blog-popup-6"]')
+        .not('[href="#blog-popup-7"]')
+        .not('[href="#blog-popup-8"]')
+        .not('[href="#blog-popup-9"]')
+        .not('[href="#blog-popup-10"]')
+        .not('[href="#blog-popup-11"]')
+        .not('[href="#blog-popup-12"]')
+        .not('[href="#blog-popup-13"]')
+        .not('[href="#blog-popup-14"]')
+        .not('[href="#blog-popup-15"]')
         .click(function (event) {
           // On-page links
           if (

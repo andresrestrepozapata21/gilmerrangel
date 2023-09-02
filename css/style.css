@@ -653,6 +653,7 @@ header.active .toggle span:nth-child(3) {
   background-color: #fdf8f7;
   position: relative;
   padding-top: 100px;
+  padding-bottom: 120px;
 }
 @media only screen and (max-width: 991.97px) {
   .hero-section {
@@ -691,7 +692,7 @@ header.active .toggle span:nth-child(3) {
 }
 @media only screen and (max-width: 991.97px) {
   .hero-section .hero-text h1 {
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 0;
     line-height: 1.2;
   }
@@ -1513,3 +1514,70 @@ header.active .toggle span:nth-child(3) {
 .copyright a {
   color: #c8332d;
 }/*# sourceMappingURL=style.css.map */
+
+/*---------------------------------------------------
+               css Response email                   
+---------------------------------------------------*/
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  opacity: 0;
+  /* Establecer inicialmente en 0 para que esté oculto */
+  transition: opacity 0.5s;
+  /* Añadir una transición suave */
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.show-alert {
+  opacity: 1;
+  /* Clase para mostrar la alerta */
+}
+
+/*---------------------------------------------------
+               css btn disabled                   
+---------------------------------------------------*/
+.btn:disabled {
+  background-color: #cccccc; /* Cambia el color de fondo a un gris claro */
+  cursor: not-allowed; /* Cambia el cursor a un ícono de "no permitido" */
+  color: #888888; /* Cambia el color del texto a un gris oscuro */
+  border: 1px solid #aaaaaa; /* Cambia el borde a un gris */
+}
+
+
+
+
+/*---------------------------------------------------
+               Dora footer css    
+               ESTILOS PERSONALIZADOS               
+---------------------------------------------------*/
+
+
+@media only screen and (max-width: 575.98px) {
+  .logosCampana {
+    width: 90%;
+    height: 90%;
+  }
+  .divCentrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .fotoGilmer1{
+    width: 90%;
+    border-radius: 20px;
+  }
+}
